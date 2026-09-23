@@ -1,101 +1,72 @@
-# 测绘地信微信小程序 / CeHuiDiXin WeChat Mini Program
+# CeHuiDiXin WeChat Mini Program
 
-[中文](#中文说明) · [English](#english)
+**Surveying · GIS · Natural Resources · Practical Geospatial Tools**
 
-## 中文说明
-
-**测绘地信**是一款面向测绘、GIS 与自然资源业务的微信小程序。V1.0.0 采用轻量化、无云开发架构，标准规范与法律法规目录随小程序发布，收藏和最近浏览保存在本机。
-
-### 主要功能
-
-- 自然资源技术标准、规范及法律法规查询
-- 收藏、最近浏览与资料检索
-- GitHub 原文件页面访问
-- 度分秒转换、面积换算、比例尺计算
-- 高斯分带、中央经线、EPSG 查询
-- 两点距离、方位角、坡度等常用测绘计算
-- 微信原生标准地图与卫星影像
-- Esri World Imagery、OpenStreetMap 辅助查看
-- 高德官方静态地图（可选，需用户自行申请 Web 服务 Key）
-- 地图定位、地图选点、坐标复制与位置分享
-
-### 开源与敏感配置
-
-本仓库**不包含真实 AppID、AppSecret、API Key、Token 或其他私人凭据**。
-
-公开默认配置位于：
-
-```text
-miniprogram/config.js
-```
-
-如需本地配置公众号原始 ID 或高德 Web 服务 Key：
-
-1. 将 `miniprogram/config.local.example.js` 复制为 `miniprogram/config.local.js`；
-2. 在 `config.local.js` 中填写自己的配置；
-3. `config.local.js` 已加入 `.gitignore`，请勿提交到公开仓库。
-
-示例：
-
-```js
-module.exports = {
-  officialAccountUsername: 'gh_xxxxxxxxxxxx',
-  amapWebKey: 'YOUR_AMAP_WEB_SERVICE_KEY'
-}
-```
-
-> 微信小程序 AppSecret 等服务端密钥不应放入前端小程序代码中。
-
-### 导入微信开发者工具
-
-1. 克隆或下载本仓库；
-2. 微信开发者工具中选择“导入项目”；
-3. 选择仓库根目录；
-4. `project.config.json` 默认使用 `touristappid`，请在本地开发环境中使用你自己的小程序 AppID；
-5. 如使用第三方网络资源，请按微信公众平台要求配置合法域名，并遵守对应数据/服务提供方条款。
-
-### 图源说明
-
-- **微信原生地图 / 卫星影像**：使用微信小程序 `<map>` 组件。
-- **Esri World Imagery**：用于辅助浏览，使用时应遵守 Esri 相关服务条款。
-- **OpenStreetMap**：用于道路、地名和位置辅助查看，使用时遵守 OSM Tile Usage Policy 与署名要求。
-- **高德地图**：仅通过官方静态地图 Web 服务接口接入，Key 由使用者自行申请并保管。
-- **腾讯地图**：当前通过微信原生地图及 `wx.openLocation` 使用腾讯体系地图能力。
-
-### 版本
-
-当前开源版本：**V1.0.0**
-
-### 许可证
-
-本项目采用 **GNU General Public License v3.0 (GPL-3.0)**。
+[**🇺🇸 English**](./README.md) · [🇨🇳 中文](./README_CN.md)
 
 ---
 
-## English
+## About
 
-**CeHuiDiXin** is a WeChat Mini Program for surveying, GIS and natural-resources workflows. Version 1.0.0 uses a lightweight architecture without cloud development. Standards/law catalog data are bundled with the app, while favorites and recent history are stored locally.
+**CeHuiDiXin** is a lightweight WeChat Mini Program for surveying, GIS and natural-resources workflows. Version **V1.0.0** does not depend on cloud development. Standards and regulation catalog data are bundled with the Mini Program, while favorites and recent history are stored locally on the user's device.
 
-### Features
+## Features
 
-- Natural-resources standards, specifications and laws lookup
-- Search, favorites and recent history
-- Links to original files on GitHub
+- Natural-resources standards, specifications and regulations lookup
+- Search, favorites and recent browsing history
+- Links to original files hosted on GitHub
 - DMS conversion, area conversion and map-scale calculation
 - Gauss–Krüger zone, central meridian and EPSG lookup
 - Distance, bearing, slope and other surveying utilities
-- WeChat native standard/satellite maps
+- WeChat native standard and satellite maps
 - Esri World Imagery and OpenStreetMap viewing
-- Optional AMap official Static Map API using the user's own Web Service Key
+- Optional AMap official Static Map service
 - Location, map point selection, coordinate copy and location sharing
 
-### Security
+## Open-source configuration
 
-No real AppID, AppSecret, API key, token or private credential is included in this repository. Copy `miniprogram/config.local.example.js` to `miniprogram/config.local.js` for local-only configuration. The local file is excluded by `.gitignore`.
+The public source package is prepared for open-source release and does not include private credentials.
 
-### License
+Optional local configuration should be kept outside the tracked source files. For local development, copy:
 
-GNU General Public License v3.0 (GPL-3.0).
+```text
+miniprogram/config.local.example.js
+```
+
+to:
+
+```text
+miniprogram/config.local.js
+```
+
+Then fill in only the configuration required by your own environment. `config.local.js` is excluded by `.gitignore` and should not be committed to a public repository.
+
+The default `project.config.json` uses `touristappid`. Developers should use their own Mini Program AppID locally in WeChat DevTools.
+
+## Map sources
+
+- **WeChat native map / satellite imagery** — based on the Mini Program `<map>` component.
+- **Esri World Imagery** — used for auxiliary imagery viewing. Users should follow the applicable Esri service terms.
+- **OpenStreetMap** — used for roads, place names and location reference. Users should follow the OSM Tile Usage Policy and attribution requirements.
+- **AMap** — uses the official Static Map Web Service when configured locally.
+- **Tencent map capabilities** — accessed through WeChat native map functions and `wx.openLocation`.
+
+## Import into WeChat DevTools
+
+1. Clone or download this repository.
+2. Open WeChat DevTools and choose **Import Project**.
+3. Select the repository root directory.
+4. Configure your own Mini Program AppID locally if needed.
+5. Configure any required legal request domains in the WeChat Mini Program admin console.
+6. Test map, location and third-party network functions on a real device before release.
+
+## Version
+
+Current open-source version: **V1.0.0**
+
+## License
+
+This project is released under the **GNU General Public License v3.0 (GPL-3.0)**.
 
 ## Author
 
