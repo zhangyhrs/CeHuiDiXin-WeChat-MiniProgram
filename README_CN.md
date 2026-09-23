@@ -68,6 +68,21 @@ miniprogram/config.local.js
 
 本项目采用 **GNU General Public License v3.0（GPL-3.0）**。
 
+## 关注与交流
+
+<table>
+  <tr>
+    <th width="33.33%">WeChat Official Account<br>微信公众号：测绘地信</th>
+    <th width="33.33%">WeChat Mini Program<br>微信小程序：测绘地信</th>
+    <th width="33.33%">Knowledge Planet<br>知识星球：测绘地理信息共享中心</th>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><img src="https://raw.githubusercontent.com/zhangyhrs/GeoStar-Selector-QGIS/main/assets/wechat-official-account.png" alt="微信公众号：测绘地信" height="150"></td>
+    <td align="center" valign="middle"><img src="https://raw.githubusercontent.com/zhangyhrs/GeoStar-Selector-QGIS/main/assets/wechat-mini-program.jpg" alt="微信小程序：测绘地信" height="150"></td>
+    <td align="center" valign="middle"><img src="https://raw.githubusercontent.com/zhangyhrs/GeoStar-Selector-QGIS/main/assets/knowledge-planet.jpg" alt="知识星球：测绘地理信息共享中心" height="150"></td>
+  </tr>
+</table>
+
 ## 作者
 
 **Zhang Y.H.** · GitHub [@zhangyhrs](https://github.com/zhangyhrs)
