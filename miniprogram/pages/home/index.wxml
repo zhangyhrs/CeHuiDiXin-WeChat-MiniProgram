@@ -1,0 +1,7 @@
+<view class="hero"><view class="brand">测绘地信</view><view class="sub">测绘地理信息 · 自然资源 · 实用工具</view><view class="search"><input placeholder="搜索标准 / 法规 / 资料 / 工具" value="{{q}}" bindinput="input" bindconfirm="search"/><button bindtap="search">搜索</button></view></view>
+<view class="container"><view class="section-title">快捷入口</view><view class="grid2">
+<view class="module-card" data-to="/pages/materials-standard/index" bindtap="go"><text class="badge">标</text><view class="module-title">标准技术库</view><view class="module-desc">{{standardCount}} 项标准规范</view></view>
+<view class="module-card" data-to="/pages/materials-law/index" bindtap="go"><text class="badge">法</text><view class="module-title">法律法规</view><view class="module-desc">{{lawCount}} 项法规资料</view></view>
+<view class="module-card" data-to="tools" bindtap="go"><text class="badge">算</text><view class="module-title">测绘工具</view><view class="module-desc">坐标、距离、方位角、坡度等</view></view>
+<view class="module-card" data-to="/pages/map-location/index" bindtap="go"><text class="badge">图</text><view class="module-title">地图定位</view><view class="module-desc">定位、选点、复制坐标、分享</view></view>
+</view><view class="section-title">常用标准</view><standard-card wx:for="{{hot}}" wx:key="id" item="{{item}}"/><view class="section-title" wx:if="{{recent.length}}">最近浏览</view><standard-card wx:for="{{recent}}" wx:key="id" item="{{item}}"/></view>

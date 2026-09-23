@@ -1,0 +1,6 @@
+<view class="searchbar"><input value="{{q}}" bindinput="input" bindconfirm="doSearch" placeholder="继续筛选标准号、名称、关键词"/><button bindtap="doSearch">搜索</button></view>
+<view class="container">
+ <view class="summary">{{title}} · {{items.length}} 项</view>
+ <standard-card wx:for="{{items}}" wx:key="id" item="{{item}}"/>
+ <view class="empty" wx:if="{{!items.length}}">没有找到匹配资料</view>
+</view>

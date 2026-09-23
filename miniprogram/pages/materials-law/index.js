@@ -1,0 +1,2 @@
+const store=require('../../utils/store')
+Page({data:{cats:[]},onLoad(){const names=[...new Set(store.standards.filter(x=>x.type==='法律法规').map(x=>x.categoryName))];this.setData({cats:names.map(name=>({name,count:store.byCategory(name,'法律法规').length}))})},open(e){wx.navigateTo({url:'/pages/list/index?type='+encodeURIComponent('法律法规')+'&category='+encodeURIComponent(e.currentTarget.dataset.name)})},all(){wx.navigateTo({url:'/pages/list/index?type='+encodeURIComponent('法律法规')})}})

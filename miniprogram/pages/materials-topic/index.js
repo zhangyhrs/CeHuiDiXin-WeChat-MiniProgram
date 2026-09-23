@@ -1,0 +1,1 @@
+Page({data:{topics:[{name:'自然资源确权登记',desc:'确权登记、地籍调查、登记单元、数据库'},{name:'自然资源调查监测',desc:'土地、森林、草原、湿地、水资源等调查监测'},{name:'国土空间规划',desc:'总体规划、详细规划、用途管制'},{name:'地籍调查',desc:'地籍测量、界址、宗地、不动产单元'},{name:'测绘地理信息',desc:'大地测量、工程测量、地图、质量检验'},{name:'遥感与GIS',desc:'遥感调查、GIS、空间数据与信息化'}]},open(e){wx.navigateTo({url:'/pages/search/index?q='+encodeURIComponent(e.currentTarget.dataset.q)})}})

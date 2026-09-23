@@ -1,0 +1,21 @@
+<view class="container">
+<view class="page-title">中央经线查询</view>
+<view class="muted">输入经度或使用当前位置，自动计算 3° / 6° 分带</view>
+
+<view class="card">
+ <input class="input" placeholder="输入经度，例如 91.123456" type="digit" value="{{lon}}" bindinput="setLon"/>
+ <view class="grid2">
+  <button class="btn" bindtap="calc">按输入查询</button>
+  <button class="ghost" bindtap="locate">使用当前位置</button>
+ </view>
+ <view class="loc" wx:if="{{currentLon}}">当前定位：{{currentLat}}, {{currentLon}}　精度约 {{locationAccuracy}}</view>
+</view>
+
+<view class="card" wx:if="{{result}}">
+ <view class="row"><text>输入经度</text><text>{{result.lon}}°</text></view>
+ <view class="row"><text>3°带号</text><text>{{result.zone3}}</text></view>
+ <view class="row"><text>3°中央经线</text><text>{{result.cm3}}°</text></view>
+ <view class="row"><text>6°带号</text><text>{{result.zone6}}</text></view>
+ <view class="row"><text>6°中央经线</text><text>{{result.cm6}}°</text></view>
+</view>
+</view>

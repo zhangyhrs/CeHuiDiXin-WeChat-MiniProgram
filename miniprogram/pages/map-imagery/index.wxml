@@ -1,0 +1,48 @@
+<view class="sourcebar">
+  <text class="{{source==='esri'?'active':''}}" data-id="esri" bindtap="switchSource">World Imagery</text>
+  <text class="{{source==='osm'?'active':''}}" data-id="osm" bindtap="switchSource">OSM</text>
+  <text class="{{source==='amap'?'active':''}}" data-id="amap" bindtap="switchSource">高德</text>
+</view>
+
+<view class="tilebox" wx:if="{{source!=='amap'}}">
+  <view class="tilegrid">
+    <image wx:for="{{tiles}}" wx:key="id" class="tile" src="{{item.url}}" mode="aspectFill"></image>
+  </view>
+  <view class="cross">＋</view>
+</view>
+
+<view class="amapbox" wx:if="{{source==='amap'}}">
+  <image wx:if="{{amapUrl}}" src="{{amapUrl}}" mode="widthFix" class="amapimg"></image>
+  <view wx:else class="empty">请先配置高德 Web 服务 Key</view>
+</view>
+
+<view class="container">
+  <view class="toolbar">
+    <button size="mini" class="ghost" bindtap="zoomOut">－</button>
+    <text>层级 {{zoom}}</text>
+    <button size="mini" class="ghost" bindtap="zoomIn">＋</button>
+  </view>
+
+  <view class="pan" wx:if="{{source!=='amap'}}">
+    <button size="mini" class="ghost up" data-dir="up" bindtap="pan">↑</button>
+    <button size="mini" class="ghost left" data-dir="left" bindtap="pan">←</button>
+    <button size="mini" class="ghost center" bindtap="reset">回中心</button>
+    <button size="mini" class="ghost right" data-dir="right" bindtap="pan">→</button>
+    <button size="mini" class="ghost down" data-dir="down" bindtap="pan">↓</button>
+  </view>
+
+  <view class="card">
+    <view class="module-title">{{sourceName}}</view>
+    <view class="module-desc">{{sourceNote}}</view>
+  </view>
+
+  <view class="card" bindtap="openTencent">
+    <view class="module-title">腾讯 / 微信地图</view>
+    <view class="module-desc">点击使用微信原生地图打开当前位置。原生地图无需额外配置第三方瓦片地址。</view>
+  </view>
+
+  <view class="card tip">
+    <view class="module-title">图源说明</view>
+    <view class="module-desc">已取消历史影像功能。ESRI World Imagery 和 OpenStreetMap 可直接辅助查看；高德采用官方静态地图接口，需要 Web 服务 Key；腾讯地图通过微信原生地图能力打开，不使用未公开的瓦片地址。</view>
+  </view>
+</view>

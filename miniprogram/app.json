@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/materials/index",
+    "pages/tools/index",
+    "pages/mine/index",
+    "pages/materials-standard/index",
+    "pages/materials-law/index",
+    "pages/materials-doc/index",
+    "pages/materials-topic/index",
+    "pages/list/index",
+    "pages/detail/index",
+    "pages/search/index",
+    "pages/favorites/index",
+    "pages/recent/index",
+    "pages/about/index",
+    "pages/tool-dms/index",
+    "pages/tool-area/index",
+    "pages/tool-scale/index",
+    "pages/tool-central-meridian/index",
+    "pages/tool-distance/index",
+    "pages/tool-bearing/index",
+    "pages/tool-slope/index",
+    "pages/tool-zone/index",
+    "pages/tool-epsg/index",
+    "pages/map-location/index",
+    "pages/map-imagery/index",
+    "pages/tool-geodistance/index",
+    "pages/tool-round/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "测绘地信",
+    "navigationBarBackgroundColor": "#0B4F8A",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F4F7FA"
+  },
+  "tabBar": {
+    "color": "#667085",
+    "selectedColor": "#0B4F8A",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/materials/index",
+        "text": "资料"
+      },
+      {
+        "pagePath": "pages/tools/index",
+        "text": "工具"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于显示当前位置、地图选点和位置分享"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ]
+}

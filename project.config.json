@@ -1,0 +1,17 @@
+{
+  "description": "测绘地信微信小程序 V1.0.0",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.7.12",
+  "appid": "touristappid",
+  "projectname": "cehui_dixin_v1.0.0",
+  "miniprogramRoot": "miniprogram/"
+}

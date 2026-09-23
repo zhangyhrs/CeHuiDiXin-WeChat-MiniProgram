@@ -1,0 +1,1 @@
+.searchbar{display:flex;background:#fff;padding:18rpx 24rpx;position:sticky;top:0;z-index:2}.searchbar input{flex:1;background:#F2F4F7;border-radius:12rpx;padding:0 20rpx;height:70rpx}.searchbar button{margin-left:12rpx;background:#0B4F8A;color:#fff;font-size:25rpx;height:70rpx;line-height:70rpx}.summary{color:#667085;font-size:24rpx;margin-bottom:18rpx}

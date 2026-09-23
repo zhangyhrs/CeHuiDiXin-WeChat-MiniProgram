@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="brand card">
+    <view class="page-title">测绘地信</view>
+    <view class="muted">V1.0.0 · 测绘地理信息资料查询与实用工具</view>
+  </view>
+
+  <view class="grid2">
+    <view class="module-card" data-url="/pages/favorites/index" bindtap="go">
+      <text class="badge">藏</text>
+      <view class="module-title">我的收藏</view>
+      <view class="module-desc">{{favCount}} 项</view>
+    </view>
+    <view class="module-card" data-url="/pages/recent/index" bindtap="go">
+      <text class="badge">历</text>
+      <view class="module-title">最近浏览</view>
+      <view class="module-desc">{{recentCount}} 项</view>
+    </view>
+    <view class="module-card" data-url="/pages/about/index" bindtap="go">
+      <text class="badge">关</text>
+      <view class="module-title">关于测绘地信</view>
+      <view class="module-desc">功能说明与版本信息</view>
+    </view>
+    <view class="module-card" bindtap="repo">
+      <text class="badge">Git</text>
+      <view class="module-title">GitHub 仓库</view>
+      <view class="module-desc">复制标准技术库仓库链接</view>
+    </view>
+  </view>
+
+  <view class="card public" bindtap="officialAccount">
+    <view class="public-head">
+      <view>
+        <view class="module-title">微信公众号：测绘地信</view>
+        <view class="module-desc">查看测绘地理信息技术文章与内容更新。</view>
+      </view>
+      <view class="public-arrow">›</view>
+    </view>
+  </view>
+</view>

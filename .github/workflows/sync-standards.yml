@@ -1,0 +1,34 @@
+name: Sync standards data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sync_github.py'
+      - '.github/workflows/sync-standards.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python scripts/sync_github.py
+      - name: Commit generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add miniprogram/data/standards.js
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Sync standards data"
+            git push
+          fi

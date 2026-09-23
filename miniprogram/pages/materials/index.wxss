@@ -1,0 +1,1 @@
+.header{background:#fff;padding:34rpx 28rpx 24rpx}.search{display:flex;margin-top:24rpx;background:#F2F4F7;border-radius:14rpx;overflow:hidden}.search input{flex:1;height:74rpx;padding:0 20rpx}.search button{width:140rpx;background:#0B4F8A;color:#fff;border-radius:0;font-size:25rpx}.notice{margin-top:24rpx}

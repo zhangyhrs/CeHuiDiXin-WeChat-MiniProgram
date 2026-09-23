@@ -1,0 +1,8 @@
+<view class="card" bindtap="open">
+  <view class="top">
+    <text class="code">{{item.code || item.type}}</text>
+    <text class="year" wx:if="{{item.year}}">{{item.year}}</text>
+  </view>
+  <view class="name">{{item.name}}</view>
+  <view class="meta">{{item.categoryName}}{{item.level2 ? ' · '+item.level2 : ''}}</view>
+</view>

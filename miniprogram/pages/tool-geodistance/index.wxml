@@ -1,0 +1,5 @@
+<view class="container"><view class="page-title">经纬度两点距离</view><view class="muted">按地球曲面近似计算两点距离与初始方位角</view>
+<view class="card"><view class="module-title">点 1</view><input class="input" placeholder="纬度" type="digit" value="{{lat1}}" data-k="lat1" bindinput="set"/><input class="input" placeholder="经度" type="digit" value="{{lon1}}" data-k="lon1" bindinput="set"/><button class="ghost" bindtap="locate1">用当前位置填入点1</button></view>
+<view class="card"><view class="module-title">点 2</view><input class="input" placeholder="纬度" type="digit" value="{{lat2}}" data-k="lat2" bindinput="set"/><input class="input" placeholder="经度" type="digit" value="{{lon2}}" data-k="lon2" bindinput="set"/><button class="ghost" bindtap="locate2">用当前位置填入点2</button></view>
+<button class="btn" bindtap="calc">计算</button>
+<view class="card" wx:if="{{distance}}"><view class="row"><text>距离</text><text>{{distance}}</text></view><view class="row"><text>初始方位角</text><text>{{bearing}}</text></view></view></view>

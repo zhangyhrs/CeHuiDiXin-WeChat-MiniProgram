@@ -1,0 +1,1 @@
+<view class="container"><view class="page-title">我的收藏</view><standard-card wx:for="{{items}}" wx:key="id" item="{{item}}"/><view class="empty" wx:if="{{!items.length}}">暂未收藏资料</view></view>

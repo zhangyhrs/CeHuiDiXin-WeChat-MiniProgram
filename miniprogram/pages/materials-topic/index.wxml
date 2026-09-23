@@ -1,0 +1,1 @@
+<view class="container"><view class="page-title">专题推荐</view><view class="muted">按业务场景聚合标准与法规资料</view><view class="topic card" wx:for="{{topics}}" wx:key="name" data-q="{{item.name}}" bindtap="open"><view class="module-title">{{item.name}}</view><view class="module-desc">{{item.desc}}</view></view></view>

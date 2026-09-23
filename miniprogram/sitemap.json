@@ -1,0 +1,9 @@
+{
+  "desc": "测绘地信",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Page({
+ data:{groups:[
+  {name:'坐标工具',items:[
+   {abbr:'度',name:'度分秒转换',desc:'十进制度与度分秒互转',url:'/pages/tool-dms/index'},
+   {abbr:'带',name:'高斯分带查询',desc:'3°/6°带号与中央经线',url:'/pages/tool-zone/index'},
+   {abbr:'经',name:'中央经线查询',desc:'根据经度快速计算',url:'/pages/tool-central-meridian/index'},
+   {abbr:'EPSG',name:'EPSG 查询',desc:'地理坐标 / 投影坐标速查',url:'/pages/tool-epsg/index'}
+  ]},
+  {name:'测绘计算',items:[
+   {abbr:'面',name:'面积换算',desc:'㎡、公顷、亩、km²互转',url:'/pages/tool-area/index'},
+   {abbr:'尺',name:'比例尺计算',desc:'图上与实地距离换算',url:'/pages/tool-scale/index'},
+   {abbr:'距',name:'两点距离',desc:'平面坐标距离计算',url:'/pages/tool-distance/index'},
+   {abbr:'角',name:'方位角计算',desc:'两点坐标计算方位角',url:'/pages/tool-bearing/index'},
+   {abbr:'坡',name:'坡度计算',desc:'坡度与坡角计算',url:'/pages/tool-slope/index'},
+   {abbr:'球',name:'经纬度距离',desc:'地球表面两点距离与方位',url:'/pages/tool-geodistance/index'}
+  ]},
+  {name:'地图与外业',items:[
+   {abbr:'图',name:'地图定位',desc:'定位、选点、图源切换、分享',url:'/pages/map-location/index'},
+   {abbr:'数',name:'坐标小数位',desc:'坐标取整、保留位数、批量格式',url:'/pages/tool-round/index'}
+  ]}
+ ]},
+ open(e){wx.navigateTo({url:e.currentTarget.dataset.url})}
+})

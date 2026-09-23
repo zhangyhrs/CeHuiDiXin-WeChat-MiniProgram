@@ -1,0 +1,66 @@
+<view class="sourcebar">
+  <text class="{{!satellite?'active':''}}" data-id="standard" bindtap="switchSource">标准地图</text>
+  <text class="{{satellite?'active':''}}" data-id="satellite" bindtap="switchSource">卫星影像</text>
+  <view class="source-note">当前：{{mapSource}}</view>
+</view>
+
+<map style="width:100%;height:700rpx"
+  latitude="{{latitude}}" longitude="{{longitude}}" scale="15"
+  markers="{{markers}}" show-location enable-satellite="{{satellite}}"
+  bindtap="tapMap">
+</map>
+
+<view class="container">
+  <view class="grid2">
+    <button class="btn" bindtap="locate">获取当前位置</button>
+    <button class="ghost" bindtap="choose">地图选点</button>
+  </view>
+
+  <view class="card">
+    <view class="row"><text>纬度</text><text>{{latitude}}</text></view>
+    <view class="row"><text>经度</text><text>{{longitude}}</text></view>
+    <view class="row"><text>定位精度</text><text>{{accuracy}}</text></view>
+    <view class="row"><text>海拔</text><text>{{altitude}}</text></view>
+    <view class="row"><text>速度</text><text>{{speed}}</text></view>
+    <view class="row" wx:if="{{address}}"><text>位置</text><text>{{address}}</text></view>
+  </view>
+
+  <view class="grid2">
+    <button class="ghost" bindtap="copy">复制坐标</button>
+    <button class="ghost" bindtap="open">腾讯 / 微信地图</button>
+  </view>
+
+  <button class="btn share" open-type="share">分享当前位置</button>
+
+  <view class="section-title">更多图源</view>
+  <view class="grid2">
+    <view class="module-card imagery-card" data-source="esri" bindtap="openImagery">
+      <text class="badge">Esri</text>
+      <view class="module-title">World Imagery</view>
+      <view class="module-desc">全球卫星影像辅助查看</view>
+    </view>
+
+    <view class="module-card imagery-card" data-source="osm" bindtap="openImagery">
+      <text class="badge">OSM</text>
+      <view class="module-title">OpenStreetMap</view>
+      <view class="module-desc">道路与地名辅助查看</view>
+    </view>
+
+    <view class="module-card imagery-card" data-source="amap" bindtap="openImagery">
+      <text class="badge">高</text>
+      <view class="module-title">高德地图</view>
+      <view class="module-desc">官方静态图，需 Web Key</view>
+    </view>
+
+    <view class="module-card imagery-card" bindtap="open">
+      <text class="badge">腾</text>
+      <view class="module-title">腾讯 / 微信地图</view>
+      <view class="module-desc">使用微信原生地图打开</view>
+    </view>
+  </view>
+
+  <view class="card tip">
+    <view class="module-title">坐标说明</view>
+    <view class="module-desc">微信地图定位使用 GCJ-02 坐标，仅用于定位、沟通和辅助查看，不替代工程测量或地籍生产成果。</view>
+  </view>
+</view>

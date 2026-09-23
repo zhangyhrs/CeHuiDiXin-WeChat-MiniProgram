@@ -1,0 +1,1 @@
+.card{background:#fff;border-radius:18rpx;padding:24rpx;margin-bottom:18rpx}.top{display:flex;justify-content:space-between}.code{color:#0B4F8A;font-weight:700;font-size:25rpx}.year{color:#98A2B3;font-size:23rpx}.name{font-size:30rpx;font-weight:600;margin:14rpx 0;color:#1D2939;line-height:1.5}.meta{font-size:23rpx;color:#667085}

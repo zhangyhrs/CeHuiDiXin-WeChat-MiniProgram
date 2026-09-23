@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="page-title">关于测绘地信</view>
+  <view class="card">
+    <view class="module-title">功能定位</view>
+    <view class="module-desc">个人开发的测绘地理信息实用工具，提供标准法规目录检索、常用测绘计算、坐标辅助和位置辅助查看等功能。</view>
+  </view>
+  <view class="card">
+    <view class="module-title">V1.0.0</view>
+    <view class="module-desc">无云开发版本。真实目录本地检索，收藏和浏览历史保存在本机；标准原文件通过 GitHub 页面查看或下载。</view>
+  </view>
+</view>

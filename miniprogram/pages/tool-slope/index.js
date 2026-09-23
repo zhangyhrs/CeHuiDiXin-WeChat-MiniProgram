@@ -1,0 +1,1 @@
+Page({data:{dh:'',d:'',slope:'',angle:''},set(e){this.setData({[e.currentTarget.dataset.k]:e.detail.value})},calc(){const dh=Number(this.data.dh),d=Number(this.data.d);if(Number.isNaN(dh)||Number.isNaN(d)||d<=0){wx.showToast({title:'请输入有效参数',icon:'none'});return}const r=dh/d;this.setData({slope:(r*100).toFixed(4)+'%',angle:(Math.atan(r)*180/Math.PI).toFixed(6)+'°'})}})

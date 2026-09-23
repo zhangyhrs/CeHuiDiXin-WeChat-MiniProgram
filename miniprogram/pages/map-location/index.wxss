@@ -1,0 +1,8 @@
+
+.sourcebar{display:flex;align-items:center;gap:14rpx;background:#fff;padding:18rpx 24rpx}
+.sourcebar text{padding:12rpx 22rpx;border-radius:999rpx;background:#F2F4F7;color:#475467}
+.sourcebar .active{background:#0B4F8A;color:#fff}
+.source-note{margin-left:auto;color:#98A2B3;font-size:22rpx}
+.share{margin-top:18rpx}
+.tip{margin-top:24rpx}
+.imagery-card{min-height:150rpx}

@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="page-title">技术资料</view>
+  <view class="muted">项目模板 · 技术总结 · 设计书 · 实施方案 · 常用表格</view>
+  <view class="card coming">
+    <view class="module-title">资料模块持续整理中</view>
+    <view class="module-desc">当前版本已完成页面结构，后续根据实际资料整理情况逐步补充内容。</view>
+  </view>
+</view>

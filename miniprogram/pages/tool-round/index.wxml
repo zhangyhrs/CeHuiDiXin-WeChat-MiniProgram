@@ -1,0 +1,5 @@
+<view class="container"><view class="page-title">坐标小数位处理</view><view class="muted">支持单值、XY、经纬度和一行多值</view>
+<view class="card"><textarea class="area" placeholder="例如：3456789.123456, 456789.987654" bindinput="setValue"></textarea>
+<picker mode="selector" range="{{[0,1,2,3,4,5,6,7,8]}}" bindchange="setDigits"><view class="picker">保留小数位：{{digits}}</view></picker>
+<button class="btn" bindtap="calc">格式化</button></view>
+<view class="card" wx:if="{{result}}"><view class="module-title">结果</view><view class="result">{{result}}</view><button class="ghost" bindtap="copy">复制结果</button></view></view>

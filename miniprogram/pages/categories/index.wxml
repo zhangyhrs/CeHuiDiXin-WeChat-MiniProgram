@@ -1,0 +1,14 @@
+<view class="container">
+ <view class="section">标准规范分类</view>
+ <view class="grid">
+  <view class="cat" wx:for="{{cats}}" wx:key="code" data-code="{{item.code}}" data-type="标准规范" bindtap="open">
+    <view class="abbr">{{item.abbr}}</view><view class="catname">{{item.name}}</view><view class="count">{{item.count}} 项</view>
+  </view>
+ </view>
+ <view class="section">法律法规分类</view>
+ <view class="grid">
+  <view class="cat" wx:for="{{lawCats}}" wx:key="code" data-code="{{item.code}}" data-type="法律法规" bindtap="open">
+    <view class="abbr law">法</view><view class="catname">{{item.name}}</view><view class="count">{{item.count}} 项</view>
+  </view>
+ </view>
+</view>

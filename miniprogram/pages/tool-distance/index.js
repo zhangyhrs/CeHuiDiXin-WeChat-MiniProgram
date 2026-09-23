@@ -1,0 +1,1 @@
+Page({data:{x1:'',y1:'',x2:'',y2:'',result:''},set(e){this.setData({[e.currentTarget.dataset.k]:e.detail.value})},calc(){const a=[this.data.x1,this.data.y1,this.data.x2,this.data.y2].map(Number);if(a.some(Number.isNaN)){wx.showToast({title:'请输入完整坐标',icon:'none'});return}const dx=a[2]-a[0],dy=a[3]-a[1];this.setData({result:Math.hypot(dx,dy).toFixed(4)+' m'})}})

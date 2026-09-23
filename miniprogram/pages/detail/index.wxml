@@ -1,0 +1,17 @@
+<view class="container" wx:if="{{item}}">
+<view class="card">
+ <view class="code">{{item.code || '资料文件'}}</view>
+ <view class="name">{{item.name}}</view>
+ <view class="meta"><text class="tag">{{item.type}}</text><text wx:if="{{item.year}}">{{item.year}}</text></view>
+</view>
+<view class="card">
+ <view class="row"><text>一级分类</text><text>{{item.categoryName || '-'}}</text></view>
+ <view class="row"><text>二级分类</text><text>{{item.level2 || '-'}}</text></view>
+ <view class="row"><text>三级分类</text><text>{{item.level3 || '-'}}</text></view>
+ <view class="row"><text>文件格式</text><text>{{item.ext || '-'}}</text></view>
+</view>
+<button class="btn" bindtap="copyGithub">复制 GitHub 查看/下载链接</button>
+<button class="ghost action" bindtap="toggle">{{fav?'取消收藏':'收藏资料'}}</button>
+<button class="ghost action" bindtap="copyPath">复制仓库相对路径</button>
+<view class="card tip"><view class="module-title">文件说明</view><view class="module-desc">小程序只提供目录、检索与详情，不直接下载标准原文件。复制 GitHub 链接后请在手机浏览器中查看或下载。</view></view>
+</view>

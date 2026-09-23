@@ -1,0 +1,5 @@
+<view class="container"><view class="page-title">实用工具</view><view class="muted">常用测绘计算 · 坐标辅助 · 地图定位</view>
+<block wx:for="{{groups}}" wx:key="name"><view class="section-title">{{item.name}}</view><view class="grid2">
+<view class="module-card" wx:for="{{item.items}}" wx:for-item="tool" wx:key="name" data-url="{{tool.url}}" bindtap="open">
+<text class="badge">{{tool.abbr}}</text><view class="module-title">{{tool.name}}</view><view class="module-desc">{{tool.desc}}</view>
+</view></view></block></view>

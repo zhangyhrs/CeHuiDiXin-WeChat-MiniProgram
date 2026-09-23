@@ -1,0 +1,36 @@
+<view class="container">
+<view class="page-title">高斯分带查询</view>
+<view class="muted">支持手动输入经度，也可直接获取当前位置</view>
+
+<view class="card">
+ <view class="module-title">经度获取</view>
+ <input class="input" placeholder="输入经度，例如 91.123456" type="digit" value="{{lon}}" bindinput="setLon"/>
+ <view class="grid2">
+  <button class="btn" bindtap="calc">按输入计算</button>
+  <button class="ghost" bindtap="locate">使用当前位置</button>
+ </view>
+ <view class="loc" wx:if="{{currentLon}}">
+  当前定位：{{currentLat}}, {{currentLon}}　精度约 {{locationAccuracy}}
+ </view>
+</view>
+
+<view class="card" wx:if="{{result}}">
+ <view class="section-title small">3°分带</view>
+ <view class="row"><text>经度</text><text>{{result.lon}}°</text></view>
+ <view class="row"><text>带号</text><text>{{result.zone3}}</text></view>
+ <view class="row"><text>中央经线</text><text>{{result.cm3}}°</text></view>
+ <view class="row"><text>CGCS2000 带号坐标系</text><text wx:if="{{result.epsg3Zone}}">EPSG:{{result.epsg3Zone}}</text><text wx:else>超出中国常用范围</text></view>
+ <view class="row"><text>CGCS2000 中央经线坐标系</text><text wx:if="{{result.epsg3CM}}">EPSG:{{result.epsg3CM}}</text><text wx:else>超出中国常用范围</text></view>
+
+ <view class="section-title small second">6°分带</view>
+ <view class="row"><text>带号</text><text>{{result.zone6}}</text></view>
+ <view class="row"><text>中央经线</text><text>{{result.cm6}}°</text></view>
+ <view class="row"><text>CGCS2000 带号坐标系</text><text wx:if="{{result.epsg6Zone}}">EPSG:{{result.epsg6Zone}}</text><text wx:else>超出中国常用范围</text></view>
+ <view class="row"><text>CGCS2000 中央经线坐标系</text><text wx:if="{{result.epsg6CM}}">EPSG:{{result.epsg6CM}}</text><text wx:else>超出中国常用范围</text></view>
+</view>
+
+<view class="card tip">
+ <view class="module-title">说明</view>
+ <view class="module-desc">定位取得的是微信地图使用的 GCJ-02 经度。用于判断分带、中央经线和 EPSG 代码通常足够，但不能直接作为工程测量或地籍成果坐标。</view>
+</view>
+</view>

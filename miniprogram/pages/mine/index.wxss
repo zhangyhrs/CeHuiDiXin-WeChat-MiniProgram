@@ -1,0 +1,5 @@
+
+.public{margin-top:22rpx}
+.public-head{display:flex;align-items:center;justify-content:space-between;gap:20rpx}
+.public-head>view:first-child{flex:1}
+.public-arrow{font-size:52rpx;color:#98A2B3;line-height:1}

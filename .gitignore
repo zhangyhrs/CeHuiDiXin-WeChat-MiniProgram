@@ -1,0 +1,16 @@
+# WeChat DevTools local/private configuration
+project.private.config.json
+
+# Local-only configuration
+miniprogram/config.local.js
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp

@@ -1,0 +1,2 @@
+const store=require('../../utils/store')
+Page({data:{q:'',standardCount:0,lawCount:0},onShow(){const all=store.standards;this.setData({standardCount:all.filter(x=>x.type==='标准规范').length,lawCount:all.filter(x=>x.type==='法律法规').length})},input(e){this.setData({q:e.detail.value})},search(){wx.navigateTo({url:'/pages/search/index?q='+encodeURIComponent(this.data.q.trim())})},go(e){wx.navigateTo({url:e.currentTarget.dataset.url})}})
