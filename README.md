@@ -23,6 +23,26 @@
 - Optional AMap official Static Map service
 - Location, map point selection, coordinate copy and location sharing
 
+## Screenshots
+
+<table>
+  <tr>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/1.jpg" alt="CeHuiDiXin screenshot 1" width="100%"></td>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/2.jpg" alt="CeHuiDiXin screenshot 2" width="100%"></td>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/3.jpg" alt="CeHuiDiXin screenshot 3" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/4.jpg" alt="CeHuiDiXin screenshot 4" width="100%"></td>
+    <td width="33.33%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/zhangyhrs/GeoStar-Selector-QGIS/main/assets/wechat-mini-program.jpg" alt="WeChat Mini Program: 测绘地信" width="88%"><br><b>WeChat Mini Program</b><br>微信小程序：测绘地信</td>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/5.jpg" alt="CeHuiDiXin screenshot 5" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/6.jpg" alt="CeHuiDiXin screenshot 6" width="100%"></td>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/7.jpg" alt="CeHuiDiXin screenshot 7" width="100%"></td>
+    <td width="33.33%" align="center" valign="middle"><img src="screenshots/8.jpg" alt="CeHuiDiXin screenshot 8" width="100%"></td>
+  </tr>
+</table>
+
 ## Open-source configuration
 
 The public source package is prepared for open-source release and does not include private credentials.
